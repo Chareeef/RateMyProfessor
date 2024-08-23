@@ -11,39 +11,77 @@ interface Message {
 function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [userMessage, setUserMessage] = useState<string>("");
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
-  const initialMsgs = [
-    {
-      role: "user",
-      content:
-        "I am looking for a great professor with a passion for astrophysics.",
-    },
-    {
-      role: "assistant",
-      content: `# Best matches:
-Based on your query, I highly recommend **Dr. Emily Bell** for her astrophysics course. According to John Turner's review, Dr. Bell's course is "out of this world" and her firsthand accounts of discoveries are inspiring. With a perfect 5-star rating, it's clear that Dr. Bell has made a significant impact on her students.
+  async function sendMessage() {
+    if (!userMessage.trim()) return;
 
-### Here's a snippet from the review that highlights Dr. Bell's strengths:
+    setMessages((messages) => [
+      ...messages,
+      { role: "user", content: userMessage },
+      { role: "assistant", content: "" },
+    ]);
 
-*"Her firsthand accounts of discoveries are inspiring."*
+    setUserMessage("");
 
-This suggests that Dr. Bell's passion for astrophysics is contagious and will likely inspire you to learn more about the subject. Additionally, her 5-star rating indicates that she is an exceptional professor who has earned the trust and admiration of her students.
+    try {
+      const response = await fetch("/api/chat/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify([
+          ...messages,
+          { role: "user", content: userMessage },
+        ]),
+      });
 
-If you're looking for a professor with a similar style, you may also consider Dr. Richard Gardner, who is also a 5-star rated professor in the physics department. While his review doesn't specifically mention astrophysics, his enthusiasm for physics is contagious, and his ability to explain complex concepts in a clear and understandable way is a valuable asset.
+      if (!response.body) {
+        console.error("response.body is not found");
+        return;
+      }
 
-Lastly, Dr. Nicole Lee is another great option, with a 4-star rating and a focus on theoretical physics concepts. Her explanations are clear and engaging, and her enthusiasm is infectious.
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
 
-All three professors seem to have a genuine passion for their subject matter, which is essential for a great learning experience. I recommend exploring their courses and reviews further to determine which one best fits your learning style and preferences.`,
-    },
-  ];
+      while (true) {
+        const { done, value }: ReadableStreamReadResult<Uint8Array> =
+          await reader.read();
+
+        if (done) {
+          break;
+        } else if (value) {
+          const chunk = decoder.decode(value, { stream: true });
+          setMessages((messages) => [
+            ...messages.slice(0, messages.length - 1),
+            {
+              role: "assistant",
+              content: messages[messages.length - 1].content + chunk,
+            },
+          ]);
+        }
+      }
+    } catch (error) {
+      console.error(error);
+      setErrorMessage("Something went wrong our side. Try again later.");
+      setTimeout(() => setErrorMessage(""), 3000);
+    }
+  }
 
   return (
-    <div className="w-[70%] h-[20em] flex flex-col bg-stone-300 border-2 border-black rounded-xl m-4 shadow-xl overflow-hidden">
-      <div className="grow border-b-2 border-black p-2 overflow-y-auto">
-        <div className="flex flex-col justify-end gap-y-2">
+    <div className="w-[70%] h-full flex flex-col bg-stone-300 border-2 border-black rounded-xl m-4 shadow-xl overflow-hidden">
+      {errorMessage && (
+        <div className="bg-red-600 p-2 text-white rounded">{errorMessage}</div>
+      )}
+      <div className="grow border-b-2 border-black overflow-y-auto">
+        <div className="flex flex-col justify-end p-2 min-h-full space-y-2 text-base">
+          {messages.length === 0 && (
+            <p className="text-gray-700 self-center text-center">
+              What kind of professor are you looking for ?
+            </p>
+          )}
+
           {messages.map((msg) => (
             <div
-              className={`max-w-[70%] p-2 ${msg.role === "user" ? "rounded-l-lg bg-white self-end" : "rounded-r-lg bg-black text-white"}`}
+              className={`max-w-[70%] p-2 ${msg.role === "user" ? "self-end rounded-l-lg bg-white" : "self-start rounded-r-lg bg-black text-white"}`}
             >
               <ReactMarkdown>{msg.content}</ReactMarkdown>
             </div>
@@ -52,15 +90,15 @@ All three professors seem to have a genuine passion for their subject matter, wh
       </div>
       <div className="grid grid-cols-5 gap-0">
         <input
-          className="col-span-4 p-2"
+          className="col-span-4 p-2 focus:outline-none"
           placeholder="Enter your query..."
           value={userMessage}
           onChange={(e) => setUserMessage(e.target.value)}
         />
 
         <button
-          className="bg-stone-500 p-2 flex items-center justify-center"
-          onClick={() => setMessages(initialMsgs)}
+          className="bg-stone-500 hover:bg-stone-600 border-l-2 border-black p-2 flex items-center justify-center"
+          onClick={sendMessage}
         >
           <MdSend />
         </button>
@@ -71,7 +109,7 @@ All three professors seem to have a genuine passion for their subject matter, wh
 
 export default function Home() {
   return (
-    <main className="grow flex flex-col justify-center items-center">
+    <main className="grow flex flex-col justify-center items-center h-[70dvh]">
       <Chat />
     </main>
   );
