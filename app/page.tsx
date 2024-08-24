@@ -2,11 +2,7 @@
 import { useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { MdSend } from "react-icons/md";
-
-interface Message {
-  role: "assistant" | "user";
-  content: string;
-}
+import { Message } from "@/types";
 
 function Chat() {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -67,12 +63,12 @@ function Chat() {
   }
 
   return (
-    <div className="w-[70%] h-full flex flex-col bg-stone-300 border-2 border-black rounded-xl m-4 shadow-xl overflow-hidden">
+    <div className="grow w-[70%] flex flex-col bg-stone-300 border-2 border-black rounded-xl m-4 shadow-xl overflow-hidden text-sm">
       {errorMessage && (
         <div className="bg-red-600 p-2 text-white rounded">{errorMessage}</div>
       )}
       <div className="grow border-b-2 border-black overflow-y-auto">
-        <div className="flex flex-col justify-end p-2 min-h-full space-y-2 text-base">
+        <div className="flex flex-col justify-end p-2 min-h-full space-y-2">
           {messages.length === 0 && (
             <p className="text-gray-700 self-center text-center">
               What kind of professor are you looking for ?
@@ -109,7 +105,7 @@ function Chat() {
 
 export default function Home() {
   return (
-    <main className="grow flex flex-col justify-center items-center h-[70dvh]">
+    <main className="grow flex flex-col justify-center items-center h-[80svh]">
       <Chat />
     </main>
   );

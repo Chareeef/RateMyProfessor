@@ -1,3 +1,4 @@
+import { Message } from "@/types";
 import { Pinecone } from "@pinecone-database/pinecone";
 import { CohereClient } from "cohere-ai";
 import Groq from "groq-sdk";
@@ -31,45 +32,49 @@ When generating recommendations, consider the following:
 Your recommendations should be clear, concise, and tailored to help the user make an informed decision. If needed, you may ask follow-up questions to better understand their preferences before making a recommendation.`;
 
 export async function POST(req: NextRequest) {
-  // Get user message
-  const data = await req.json();
-  const userMessage = data[data.length - 1].content;
-
-  // Create Cohere embedding
-  const cohereResponse = (await cohere.embed({
-    texts: [userMessage],
-    model: "embed-multilingual-v3.0",
-    inputType: "search_query",
-  })) as CohereEmbeddingResponse;
-
-  const embedding = cohereResponse.embeddings[0];
-
-  // Get matches from Pinecone
-  const results = await index.query({
-    topK: 3,
-    includeMetadata: true,
-    vector: embedding,
-  });
-
-  // Build context string
-  let contextString = "<MATCHES>\n";
-  results.matches.forEach((match) => {
-    contextString += `
-    Professor: ${match.id}
-    Reviewer: ${match.metadata?.reviewer}
-    Review: ${match.metadata?.description}
-    Subject: ${match.metadata?.subject}
-    Stars: ${match.metadata?.stars}\n
-    ---\n`;
-  });
-  contextString += "</MATCHES>";
-
-  // Build complete user's prompt
-  const userPrompt = `${contextString}\n\n<QUERY>${userMessage}</QUERY>`;
-  const previousMessages = data.slice(0, data.length - 1);
-
   try {
+    // Get user message and previous messages
+    const data: Message[] = await req.json();
+    const userMessage = data[data.length - 1].content;
+
+    // Get the text to embed
+    const textsToEmbed = data.map((msg) => msg.content).join("\n");
+
+    // Create Cohere embedding
+    const cohereResponse = (await cohere.embed({
+      texts: [textsToEmbed],
+      model: "embed-multilingual-v3.0",
+      inputType: "search_query",
+    })) as CohereEmbeddingResponse;
+
+    const embedding = cohereResponse.embeddings[0];
+
+    // Get matches from Pinecone
+    const results = await index.query({
+      topK: 5,
+      includeMetadata: true,
+      vector: embedding,
+    });
+
+    // Build context string
+    let contextString = "<MATCHES>\n";
+    results.matches.forEach((match) => {
+      contextString += `
+      Professor: ${match.id}
+      Reviewer: ${match.metadata?.reviewer}
+      Review: ${match.metadata?.description}
+      Subject: ${match.metadata?.subject}
+      Stars: ${match.metadata?.stars}\n
+      ---\n`;
+    });
+    contextString += "</MATCHES>";
+
+    // Build complete user's prompt
+    const userPrompt = `${contextString}\n\n<QUERY>${userMessage}</QUERY>`;
+
     // Get the chat completion stream from Groq
+    const previousMessages = data.slice(0, data.length - 1);
+
     const stream = await groq.chat.completions.create({
       messages: [
         { role: "system", content: systemPrompt },
