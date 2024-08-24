@@ -75,8 +75,9 @@ function Chat() {
             </p>
           )}
 
-          {messages.map((msg) => (
+          {messages.map((msg, index) => (
             <div
+              key={index}
               className={`max-w-[70%] p-2 ${msg.role === "user" ? "self-end rounded-l-lg bg-white" : "self-start rounded-r-lg bg-black text-white"}`}
             >
               <ReactMarkdown>{msg.content}</ReactMarkdown>
