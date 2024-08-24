@@ -71,7 +71,7 @@ export default function CreateReviewForm() {
   };
 
   return (
-    <div className="flex flex-col items-center w-full bg-stone-300 p-4 border text-center rounded-lg shadow-md">
+    <div className="grow flex flex-col items-center w-full p-4 border text-center rounded-lg shadow-md">
       <h2 className="text-2xl font-bold mb-4">Submit a Review</h2>
       {error && (
         <div className="bg-red-200 text-red-800 p-2 mb-4 rounded">{error}</div>

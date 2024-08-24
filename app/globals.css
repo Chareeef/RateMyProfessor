@@ -27,3 +27,7 @@ h3 {
 p {
 	@apply my-2;
 }
+
+.btn-header {
+	@apply w-full md:w-fit p-2 bg-slate-800 border-2 border-amber-600 rounded-lg
+}
