@@ -1,13 +1,16 @@
 "use client";
-import { useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { MdSend } from "react-icons/md";
 import { Message } from "@/types";
 
-function Chat() {
+function Chat({
+  setErrorMessage,
+}: {
+  setErrorMessage: Dispatch<SetStateAction<string>>;
+}) {
   const [messages, setMessages] = useState<Message[]>([]);
   const [userMessage, setUserMessage] = useState<string>("");
-  const [errorMessage, setErrorMessage] = useState<string>("");
 
   async function sendMessage() {
     if (!userMessage.trim()) return;
@@ -64,9 +67,6 @@ function Chat() {
 
   return (
     <div className="grow w-[70%] flex flex-col bg-stone-300 border-2 border-black rounded-xl m-4 shadow-xl overflow-hidden text-sm">
-      {errorMessage && (
-        <div className="bg-red-600 p-2 text-white rounded">{errorMessage}</div>
-      )}
       <div className="grow border-b-2 border-black overflow-y-auto">
         <div className="flex flex-col justify-end p-2 min-h-full space-y-2">
           {messages.length === 0 && (
@@ -105,9 +105,17 @@ function Chat() {
 }
 
 export default function Home() {
+  const [errorMessage, setErrorMessage] = useState<string>("");
+
   return (
     <main className="grow flex flex-col justify-center items-center h-[80svh]">
-      <Chat />
+      {errorMessage && (
+        <div className="absolute bg-red-600 p-2 text-white rounded">
+          {errorMessage}
+        </div>
+      )}
+
+      <Chat setErrorMessage={setErrorMessage} />
     </main>
   );
 }
