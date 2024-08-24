@@ -1,0 +1,702 @@
+[
+  {
+    "professor": "Prof. Elodie Dupont",
+    "subject": "French",
+    "reviewer": "Lucas Brunet",
+    "stars": 3,
+    "description": "Prof. Dupont's French linguistics course is interesting but too fast-paced. I often found myself struggling to keep up."
+  },
+  {
+    "professor": "Dr. Rebecca Jones",
+    "subject": "English",
+    "reviewer": "Emily Parker",
+    "stars": 5,
+    "description": "Dr. Jones' course on British literature is exceptional. Her discussions on the Romantic poets are particularly insightful."
+  },
+  {
+    "professor": "Dr. Kevin Morris",
+    "subject": "Physics",
+    "reviewer": "Olivia Johnson",
+    "stars": 3,
+    "description": "Dr. Morris has a deep understanding of mechanics, but his lectures can be a bit dry. The material is solid, but engagement could be improved."
+  },
+  {
+    "professor": "Dr. Kevin Morris",
+    "subject": "Physics",
+    "reviewer": "Ethan Thompson",
+    "stars": 4,
+    "description": "Dr. Morris has improved his teaching style in the second semester. He provided more interactive examples and lab sessions."
+  },
+  {
+    "professor": "Prof. Yasmine Nasser",
+    "subject": "Arabic",
+    "reviewer": "Amin Kader",
+    "stars": 5,
+    "description": "Prof. Nasser is one of the best Arabic teachers I’ve ever had. She breaks down complex grammar in a way that’s easy to understand."
+  },
+  {
+    "professor": "Prof. Elodie Dupont",
+    "subject": "French",
+    "reviewer": "Marie Lefebvre",
+    "stars": 4,
+    "description": "I really enjoyed Prof. Dupont's class, though I wish there was more emphasis on conversational practice."
+  },
+  {
+    "professor": "Dr. Khalid Abu Hassan",
+    "subject": "Arabic",
+    "reviewer": "Fatima Zayed",
+    "stars": 2,
+    "description": "Dr. Abu Hassan's teaching style is difficult to follow. He often jumps between topics without clear explanations."
+  },
+  {
+    "professor": "Prof. Martin Goldberg",
+    "subject": "History & Geography",
+    "reviewer": "Daniel Cohen",
+    "stars": 5,
+    "description": "Prof. Goldberg's course on modern European history was fascinating. He brought the subject to life with engaging stories and case studies."
+  },
+  {
+    "professor": "Dr. Alison Green",
+    "subject": "Philosophy",
+    "reviewer": "Emma Hughes",
+    "stars": 3,
+    "description": "Dr. Green is very knowledgeable, but her classes can be a bit too theoretical. More real-life examples would be helpful."
+  },
+  {
+    "professor": "Prof. Hisham Al-Taher",
+    "subject": "Arabic",
+    "reviewer": "Mohammed Habib",
+    "stars": 4,
+    "description": "Prof. Al-Taher's classical Arabic course was challenging but rewarding. His passion for the language is contagious."
+  },
+  {
+    "professor": "Prof. Martin Goldberg",
+    "subject": "History & Geography",
+    "reviewer": "Sarah Baker",
+    "stars": 4,
+    "description": "His lectures on colonialism in Africa were very detailed. Sometimes a bit too much information, but overall an excellent course."
+  },
+  {
+    "professor": "Dr. Julia Carter",
+    "subject": "Natural Sciences",
+    "reviewer": "Laura Evans",
+    "stars": 5,
+    "description": "Dr. Carter made biology exciting. Her enthusiasm for the subject inspired me to pursue a career in environmental science."
+  },
+  {
+    "professor": "Prof. Ahmed Al-Rawi",
+    "subject": "Arabic",
+    "reviewer": "Khaled Mansour",
+    "stars": 3,
+    "description": "The content was good, but Prof. Al-Rawi often rushed through material without providing enough time for questions."
+  },
+  {
+    "professor": "Prof. Sophie Lamarche",
+    "subject": "French",
+    "reviewer": "Claire Fontaine",
+    "stars": 4,
+    "description": "Prof. Lamarche is great at explaining complex grammar, but the course could benefit from more interactive speaking exercises."
+  },
+  {
+    "professor": "Dr. Jonathan Miller",
+    "subject": "Mathematics",
+    "reviewer": "James King",
+    "stars": 5,
+    "description": "Dr. Miller's calculus course was well-organized and easy to follow. He always made time for individual questions."
+  },
+  {
+    "professor": "Prof. Angela Ruiz",
+    "subject": "Philosophy",
+    "reviewer": "Lily Smith",
+    "stars": 2,
+    "description": "Prof. Ruiz is knowledgeable but not very engaging. I found the lectures hard to follow and too focused on abstract concepts."
+  },
+  {
+    "professor": "Dr. Rebecca Jones",
+    "subject": "English",
+    "reviewer": "William Carter",
+    "stars": 4,
+    "description": "Her Shakespeare class was both challenging and fascinating. She brought new insights to even the most well-known plays."
+  },
+  {
+    "professor": "Prof. Martin Goldberg",
+    "subject": "History & Geography",
+    "reviewer": "Thomas Gray",
+    "stars": 5,
+    "description": "Prof. Goldberg's ability to weave together history and geography is unparalleled. His courses are truly eye-opening."
+  },
+  {
+    "professor": "Dr. Alison Green",
+    "subject": "Philosophy",
+    "reviewer": "Natalie Wood",
+    "stars": 4,
+    "description": "Though theoretical, Dr. Green's class made me think critically about ethics. Her lectures are deep, but also rewarding."
+  },
+  {
+    "professor": "Prof. Antoine Roux",
+    "subject": "French",
+    "reviewer": "Julien Marchand",
+    "stars": 5,
+    "description": "Prof. Roux's teaching style is clear and focused. His classes were well-structured and highly informative."
+  },
+  {
+    "professor": "Prof. Sophie Lamarche",
+    "subject": "French",
+    "reviewer": "Amelie Martin",
+    "stars": 3,
+    "description": "While I appreciated the material, Prof. Lamarche's classes were a bit monotonous. I wish there were more student interactions."
+  },
+  {
+    "professor": "Dr. Kevin Morris",
+    "subject": "Physics",
+    "reviewer": "Alexander Brown",
+    "stars": 5,
+    "description": "Dr. Morris is brilliant! His passion for physics makes his lectures extremely engaging. Best professor I've had."
+  },
+  {
+    "professor": "Dr. Julia Carter",
+    "subject": "Natural Sciences",
+    "reviewer": "Emma Wilson",
+    "stars": 4,
+    "description": "Her explanations on ecological systems were clear and easy to understand. Sometimes she moves a bit fast though."
+  },
+  {
+    "professor": "Prof. Charles Hamilton",
+    "subject": "Mathematics",
+    "reviewer": "Henry Baker",
+    "stars": 2,
+    "description": "Prof. Hamilton's math course was very difficult to follow. He often skips steps in complex problems, leaving students confused."
+  },
+  {
+    "professor": "Dr. Julia Carter",
+    "subject": "Natural Sciences",
+    "reviewer": "Sophia Taylor",
+    "stars": 5,
+    "description": "Dr. Carter has an amazing way of making science fun. Her lectures are always packed with interesting examples."
+  },
+  {
+    "professor": "Prof. Sophie Lamarche",
+    "subject": "French",
+    "reviewer": "Victor Leroy",
+    "stars": 4,
+    "description": "Prof. Lamarche was very approachable and her explanations were always on point. The course was well-organized."
+  },
+  {
+    "professor": "Prof. Angela Ruiz",
+    "subject": "Philosophy",
+    "reviewer": "Benjamin Scott",
+    "stars": 3,
+    "description": "Prof. Ruiz knows her material well but her teaching method is quite dry. It was hard to stay engaged."
+  },
+  {
+    "professor": "Dr. Jonathan Miller",
+    "subject": "Mathematics",
+    "reviewer": "Isabella Walker",
+    "stars": 5,
+    "description": "Dr. Miller was very patient and his explanations of complex math concepts were always thorough and understandable."
+  },
+  {
+    "professor": "Dr. Olivia Simmons",
+    "subject": "History & Geography",
+    "reviewer": "Jack White",
+    "stars": 4,
+    "description": "Dr. Simmons provides insightful perspectives on historical events. Her lectures are thorough, though at times, they could be a bit more engaging."
+  },
+  {
+    "professor": "Dr. David Thompson",
+    "subject": "Mathematics",
+    "reviewer": "Liam Turner",
+    "stars": 3,
+    "description": "Dr. Thompson's lectures are well-prepared, but sometimes he goes too fast. I'd prefer more focus on applied examples."
+  },
+  {
+    "professor": "Prof. Elodie Dupont",
+    "subject": "French",
+    "reviewer": "Chloe Petit",
+    "stars": 5,
+    "description": "Prof. Dupont's passion for French literature is contagious. Her course on 19th-century novels was truly inspiring."
+  },
+  {
+    "professor": "Dr. Olivia Simmons",
+    "subject": "History & Geography",
+    "reviewer": "Sophie Evans",
+    "stars": 5,
+    "description": "Her lectures on historical geography were some of the best I've attended. She makes complex subjects easy to understand."
+  },
+  {
+    "professor": "Prof. Hisham Al-Taher",
+    "subject": "Arabic",
+    "reviewer": "Leila Rahman",
+    "stars": 3,
+    "description": "Prof. Al-Taher's teaching style is thorough, but I struggled with the pacing of his lectures. More practice exercises would help."
+  },
+  {
+    "professor": "Dr. Olivia Simmons",
+    "subject": "History & Geography",
+    "reviewer": "Ava Roberts",
+    "stars": 2,
+    "description": "While Dr. Simmons is knowledgeable, I found the course to be a bit too dry for my liking. I expected more interactive sessions."
+  },
+  {
+    "professor": "Prof. Charles Hamilton",
+    "subject": "Mathematics",
+    "reviewer": "George Bailey",
+    "stars": 4,
+    "description": "Prof. Hamilton's lectures were challenging, but his methodical approach made the material easier to grasp over time."
+  },
+  {
+    "professor": "Prof. Antoine Roux",
+    "subject": "French",
+    "reviewer": "Emma Durand",
+    "stars": 4,
+    "description": "Prof. Roux's class was great. He kept a good balance between grammar and conversation, though more speaking practice would have been nice."
+  },
+  {
+    "professor": "Prof. Jonathan Smith",
+    "subject": "Natural Sciences",
+    "reviewer": "Jacob Adams",
+    "stars": 3,
+    "description": "Prof. Smith knows his biology, but his lectures can be a bit monotonous. More visual aids could improve the experience."
+  },
+  {
+    "professor": "Dr. Rebecca Jones",
+    "subject": "English",
+    "reviewer": "Olivia Harris",
+    "stars": 5,
+    "description": "Dr. Jones' lectures are brilliant. She knows how to bring literature to life, making even the most complex texts accessible."
+  },
+  {
+    "professor": "Prof. Ahmed Al-Rawi",
+    "subject": "Arabic",
+    "reviewer": "Youssef Hassan",
+    "stars": 4,
+    "description": "Prof. Al-Rawi's classical Arabic course was excellent. He was always open to answering questions and clarifying difficult topics."
+  },
+  {
+    "professor": "Dr. Julia Carter",
+    "subject": "Natural Sciences",
+    "reviewer": "Amelia Moore",
+    "stars": 3,
+    "description": "Dr. Carter's course on environmental science was interesting, but some topics felt rushed. A bit more depth would be nice."
+  },
+  {
+    "professor": "Dr. David Thompson",
+    "subject": "Mathematics",
+    "reviewer": "Lucas Gray",
+    "stars": 4,
+    "description": "Dr. Thompson's teaching style is clear, and he makes sure everyone understands before moving on. I appreciated his approach."
+  },
+  {
+    "professor": "Dr. Olivia Simmons",
+    "subject": "History & Geography",
+    "reviewer": "Ella King",
+    "stars": 5,
+    "description": "Her class on historical geography was fascinating. Dr. Simmons does a great job of connecting the past with the present."
+  },
+  {
+    "professor": "Prof. Hisham Al-Taher",
+    "subject": "Arabic",
+    "reviewer": "Ali Ibrahim",
+    "stars": 4,
+    "description": "Prof. Al-Taher’s classical Arabic course was demanding, but he was always ready to help and clarify the material."
+  },
+  {
+    "professor": "Prof. Jonathan Smith",
+    "subject": "Natural Sciences",
+    "reviewer": "Charlotte Young",
+    "stars": 5,
+    "description": "Prof. Smith's biology class was outstanding. He is always enthusiastic and made every lecture interesting."
+  },
+  {
+    "professor": "Dr. Alison Green",
+    "subject": "Philosophy",
+    "reviewer": "Ethan Wilson",
+    "stars": 4,
+    "description": "Dr. Green's ethics course was thought-provoking and engaging. She challenged us to think critically about complex topics."
+  },
+  {
+    "professor": "Prof. Yasmine Nasser",
+    "subject": "Arabic",
+    "reviewer": "Fatimah Abdullah",
+    "stars": 3,
+    "description": "Prof. Nasser's Arabic course was solid but a bit repetitive. I would have liked more variety in the teaching materials."
+  },
+  {
+    "professor": "Prof. Jonathan Smith",
+    "subject": "Natural Sciences",
+    "reviewer": "Lily Thompson",
+    "stars": 4,
+    "description": "Prof. Smith's approach to biology made even the most complex topics understandable. The lectures were well-structured."
+  },
+  {
+    "professor": "Dr. Rebecca Jones",
+    "subject": "English",
+    "reviewer": "Noah Mitchell",
+    "stars": 4,
+    "description": "Dr. Jones' course on modern American literature was very insightful. Her analysis of the texts was always thorough."
+  },
+  {
+    "professor": "Dr. Kevin Morris",
+    "subject": "Physics",
+    "reviewer": "Daniel Taylor",
+    "stars": 3,
+    "description": "Dr. Morris is knowledgeable, but his lectures can be a bit dense. More real-world applications would improve the course."
+  },
+  {
+    "professor": "Prof. Charles Hamilton",
+    "subject": "Mathematics",
+    "reviewer": "William Johnson",
+    "stars": 4,
+    "description": "Prof. Hamilton is great at breaking down complex math problems. His teaching style is structured and easy to follow."
+  },
+  {
+    "professor": "Prof. Martin Goldberg",
+    "subject": "History & Geography",
+    "reviewer": "Emma Davis",
+    "stars": 5,
+    "description": "Prof. Goldberg's deep knowledge of history makes his classes incredibly engaging. I learned so much from his course."
+  },
+  {
+    "professor": "Dr. Alison Green",
+    "subject": "Philosophy",
+    "reviewer": "Charlotte Wright",
+    "stars": 3,
+    "description": "Dr. Green's lectures are informative, but the material is a bit dry at times. More interactive discussions would be beneficial."
+  },
+  {
+    "professor": "Prof. Elodie Dupont",
+    "subject": "French",
+    "reviewer": "Maxime Dubois",
+    "stars": 5,
+    "description": "Prof. Dupont is an incredible teacher. Her passion for French literature shines through in every lecture."
+  },
+  {
+    "professor": "Prof. Yasmine Nasser",
+    "subject": "Arabic",
+    "reviewer": "Zainab Mahdi",
+    "stars": 4,
+    "description": "Prof. Nasser’s Arabic course was very thorough. She made sure everyone in the class kept up with the material."
+  },
+  {
+    "professor": "Dr. Kevin Morris",
+    "subject": "Physics",
+    "reviewer": "Samuel Clark",
+    "stars": 4,
+    "description": "Dr. Morris is a great physics professor. His explanations are clear and he makes challenging topics more accessible."
+  },
+  {
+    "professor": "Dr. Julia Carter",
+    "subject": "Natural Sciences",
+    "reviewer": "Isabella Turner",
+    "stars": 5,
+    "description": "Dr. Carter's lectures are always engaging. She uses excellent examples to make complex topics easier to understand."
+  },
+  {
+    "professor": "Dr. Jonathan Miller",
+    "subject": "Mathematics",
+    "reviewer": "Alexander Lewis",
+    "stars": 4,
+    "description": "Dr. Miller's calculus class was challenging but rewarding. His step-by-step approach helped me grasp difficult concepts."
+  },
+  {
+    "professor": "Prof. Antoine Roux",
+    "subject": "French",
+    "reviewer": "Sophie Martin",
+    "stars": 3,
+    "description": "Prof. Roux's class was informative, but I found the pace a bit too slow. More focus on conversation practice would be beneficial."
+  },
+  {
+    "professor": "Dr. Alison Green",
+    "subject": "Philosophy",
+    "reviewer": "Benjamin Scott",
+    "stars": 4,
+    "description": "Dr. Green's lectures on philosophy were thought-provoking. Her discussions on existentialism were particularly engaging."
+  },
+  {
+    "professor": "Dr. Rebecca Jones",
+    "subject": "English",
+    "reviewer": "Grace Walker",
+    "stars": 5,
+    "description": "Dr. Jones is an outstanding lecturer. Her analysis of literary texts is detailed and insightful, making the course thoroughly enjoyable."
+  },
+  {
+    "professor": "Prof. Martin Goldberg",
+    "subject": "History & Geography",
+    "reviewer": "Charlotte Wilson",
+    "stars": 4,
+    "description": "Prof. Goldberg's lectures are well-organized and informative, though I would have liked more focus on recent history."
+  },
+  {
+    "professor": "Dr. Julia Carter",
+    "subject": "Natural Sciences",
+    "reviewer": "Henry Foster",
+    "stars": 3,
+    "description": "Dr. Carter's course was interesting but some of the material was hard to grasp without further examples."
+  },
+  {
+    "professor": "Prof. Ahmed Al-Rawi",
+    "subject": "Arabic",
+    "reviewer": "Sarah Khalil",
+    "stars": 4,
+    "description": "Prof. Al-Rawi's teaching style is thorough and clear. His passion for the Arabic language is inspiring."
+  },
+  {
+    "professor": "Prof. Charles Hamilton",
+    "subject": "Mathematics",
+    "reviewer": "Oliver Brooks",
+    "stars": 5,
+    "description": "Prof. Hamilton is an excellent professor. His ability to explain difficult math concepts made the course very enjoyable."
+  },
+  {
+    "professor": "Prof. Jonathan Smith",
+    "subject": "Natural Sciences",
+    "reviewer": "Zoe Morgan",
+    "stars": 4,
+    "description": "Prof. Smith's course on genetics was well-structured and engaging. He encouraged questions and discussions, which made the class interactive."
+  },
+  {
+    "professor": "Prof. Yasmine Nasser",
+    "subject": "Arabic",
+    "reviewer": "Amira Malik",
+    "stars": 3,
+    "description": "Prof. Nasser's course was decent but I found the lectures a bit too rigid. More practical applications would have been appreciated."
+  },
+  {
+    "professor": "Dr. Kevin Morris",
+    "subject": "Physics",
+    "reviewer": "Sophia Hill",
+    "stars": 4,
+    "description": "Dr. Morris' course on electromagnetism was challenging but rewarding. His explanations were clear, though more practical examples could be useful."
+  },
+  {
+    "professor": "Prof. Elodie Dupont",
+    "subject": "French",
+    "reviewer": "Louis Bernard",
+    "stars": 4,
+    "description": "Prof. Dupont's course was enjoyable and informative. Her deep knowledge of French literature made the lectures engaging."
+  },
+  {
+    "professor": "Dr. Alison Green",
+    "subject": "Philosophy",
+    "reviewer": "Jacob Carter",
+    "stars": 5,
+    "description": "Dr. Green's philosophy course was one of the best I've taken. Her lectures are engaging and she encourages critical thinking."
+  },
+  {
+    "professor": "Dr. Jonathan Miller",
+    "subject": "Mathematics",
+    "reviewer": "Lily Hughes",
+    "stars": 3,
+    "description": "Dr. Miller is a solid math professor, though some topics felt rushed. I would have liked more time spent on proofs and derivations."
+  },
+  {
+    "professor": "Prof. Antoine Roux",
+    "subject": "French",
+    "reviewer": "Camille Laurent",
+    "stars": 4,
+    "description": "Prof. Roux's course is well-rounded with a good balance between grammar and literature. I especially enjoyed the discussions on French poetry."
+  },
+  {
+    "professor": "Dr. David Thompson",
+    "subject": "Mathematics",
+    "reviewer": "Ella Brooks",
+    "stars": 5,
+    "description": "Dr. Thompson's calculus course was excellent. He breaks down complex problems into manageable steps and always ensures that everyone is following."
+  },
+  {
+    "professor": "Prof. Martin Goldberg",
+    "subject": "History & Geography",
+    "reviewer": "Joshua Parker",
+    "stars": 3,
+    "description": "Prof. Goldberg's lectures are informative, but they can be a bit monotonous at times. More engaging materials could improve the course."
+  },
+  {
+    "professor": "Prof. Charles Hamilton",
+    "subject": "Mathematics",
+    "reviewer": "Hannah Richardson",
+    "stars": 4,
+    "description": "Prof. Hamilton is an effective lecturer. His step-by-step approach helps make difficult math topics easier to understand."
+  },
+  {
+    "professor": "Prof. Ahmed Al-Rawi",
+    "subject": "Arabic",
+    "reviewer": "Omar Ahmed",
+    "stars": 4,
+    "description": "Prof. Al-Rawi’s course on classical Arabic was insightful and well-paced. His knowledge of the subject is impressive."
+  },
+  {
+    "professor": "Dr. Rebecca Jones",
+    "subject": "English",
+    "reviewer": "Mia Baker",
+    "stars": 5,
+    "description": "Dr. Jones' course on American literature was one of the best I've attended. Her enthusiasm for the subject is contagious."
+  },
+  {
+    "professor": "Dr. Kevin Morris",
+    "subject": "Physics",
+    "reviewer": "Ethan Mitchell",
+    "stars": 3,
+    "description": "Dr. Morris' physics course is solid, but the material can be quite dense. More interactive experiments would enhance the learning experience."
+  },
+  {
+    "professor": "Prof. Yasmine Nasser",
+    "subject": "Arabic",
+    "reviewer": "Layla Hassan",
+    "stars": 4,
+    "description": "Prof. Nasser’s Arabic course is well-structured and engaging. She provides a lot of resources to help with difficult concepts."
+  },
+  {
+    "professor": "Dr. Julia Carter",
+    "subject": "Natural Sciences",
+    "reviewer": "Emily Turner",
+    "stars": 4,
+    "description": "Dr. Carter's environmental science course was fascinating. She uses case studies and examples that make the material relevant."
+  },
+  {
+    "professor": "Dr. Olivia Simmons",
+    "subject": "History & Geography",
+    "reviewer": "Charlotte Hayes",
+    "stars": 5,
+    "description": "Dr. Simmons is an incredible lecturer. Her insights into historical geography were eye-opening and made the course enjoyable."
+  },
+  {
+    "professor": "Prof. Antoine Roux",
+    "subject": "French",
+    "reviewer": "Alice Leclerc",
+    "stars": 4,
+    "description": "Prof. Roux’s French literature course was comprehensive and well-balanced. I particularly enjoyed the focus on 20th-century writers."
+  },
+  {
+    "professor": "Dr. Kevin Morris",
+    "subject": "Physics",
+    "reviewer": "Nathan Bennett",
+    "stars": 4,
+    "description": "Dr. Morris' course on quantum mechanics was challenging but rewarding. His teaching style is straightforward and clear."
+  },
+  {
+    "professor": "Prof. Ahmed Al-Rawi",
+    "subject": "Arabic",
+    "reviewer": "Huda Abdi",
+    "stars": 3,
+    "description": "Prof. Al-Rawi's Arabic course was informative but could benefit from more interactive sessions to help with comprehension."
+  },
+  {
+    "professor": "Dr. Jonathan Miller",
+    "subject": "Mathematics",
+    "reviewer": "Sophia Evans",
+    "stars": 4,
+    "description": "Dr. Miller's mathematics course was well-paced and informative. His approach to problem-solving helped me understand difficult concepts."
+  },
+  {
+    "professor": "Dr. Alison Green",
+    "subject": "Philosophy",
+    "reviewer": "Ethan Coleman",
+    "stars": 5,
+    "description": "Dr. Green's course on moral philosophy was incredibly engaging. Her lectures were thought-provoking and encouraged deep discussions."
+  },
+  {
+    "professor": "Prof. Martin Goldberg",
+    "subject": "History & Geography",
+    "reviewer": "James Carter",
+    "stars": 4,
+    "description": "Prof. Goldberg's course on modern history was insightful. His in-depth analysis of historical events helped me gain a better understanding of the subject."
+  },
+  {
+    "professor": "Dr. Rebecca Jones",
+    "subject": "English",
+    "reviewer": "Ella Brown",
+    "stars": 5,
+    "description": "Dr. Jones' course on Shakespeare was exceptional. Her passion for the subject made the lectures incredibly engaging and enjoyable."
+  },
+  {
+    "professor": "Prof. Antoine Roux",
+    "subject": "French",
+    "reviewer": "Lucas Petit",
+    "stars": 3,
+    "description": "Prof. Roux's French course was decent, though I felt that some topics could have been explored in more depth. Overall, it was a solid course."
+  },
+  {
+    "professor": "Dr. Olivia Simmons",
+    "subject": "History & Geography",
+    "reviewer": "Isabelle Martin",
+    "stars": 4,
+    "description": "Dr. Simmons' course on geographical exploration was highly informative. Her enthusiasm for the subject was contagious and made the course enjoyable."
+  },
+  {
+    "professor": "Prof. Ahmed Al-Rawi",
+    "subject": "Arabic",
+    "reviewer": "Khalid Hamdi",
+    "stars": 4,
+    "description": "Prof. Al-Rawi’s course was well-organized and his explanations of complex grammatical rules were clear. I would have liked more focus on spoken Arabic."
+  },
+  {
+    "professor": "Prof. Charles Hamilton",
+    "subject": "Mathematics",
+    "reviewer": "Daniel King",
+    "stars": 5,
+    "description": "Prof. Hamilton's approach to teaching advanced calculus was exemplary. His explanations made difficult concepts seem more approachable."
+  },
+  {
+    "professor": "Dr. Jonathan Miller",
+    "subject": "Mathematics",
+    "reviewer": "Abigail Moore",
+    "stars": 3,
+    "description": "Dr. Miller's course was informative but sometimes felt rushed. More time for in-class exercises would have helped solidify the material."
+  },
+  {
+    "professor": "Dr. Alison Green",
+    "subject": "Philosophy",
+    "reviewer": "Joshua Lee",
+    "stars": 5,
+    "description": "Dr. Green's philosophy course was fascinating. Her ability to break down complex ideas and encourage open discussions made the subject come to life."
+  },
+  {
+    "professor": "Dr. Julia Carter",
+    "subject": "Natural Sciences",
+    "reviewer": "Grace Thompson",
+    "stars": 4,
+    "description": "Dr. Carter's lectures on ecology were well-structured and informative. Her passion for the environment shines through in her teaching."
+  },
+  {
+    "professor": "Prof. Elodie Dupont",
+    "subject": "French",
+    "reviewer": "Juliette Moreau",
+    "stars": 4,
+    "description": "Prof. Dupont's French literature course was interesting and well-paced. Her insights into classic French novels made the class enjoyable."
+  },
+  {
+    "professor": "Dr. Olivia Simmons",
+    "subject": "History & Geography",
+    "reviewer": "Alex Baker",
+    "stars": 5,
+    "description": "Dr. Simmons' lectures on historical geography were incredibly engaging. She brings the subject to life with vivid examples and case studies."
+  },
+  {
+    "professor": "Prof. Antoine Roux",
+    "subject": "French",
+    "reviewer": "Claire Dubois",
+    "stars": 3,
+    "description": "Prof. Roux's French linguistics course was solid, but I wish there were more opportunities for in-class practice and discussion."
+  },
+  {
+    "professor": "Dr. Jonathan Miller",
+    "subject": "Mathematics",
+    "reviewer": "Emily Collins",
+    "stars": 4,
+    "description": "Dr. Miller's course was well-organized and covered a lot of ground. His explanations of complex topics like multivariable calculus were helpful."
+  },
+  {
+    "professor": "Dr. David Thompson",
+    "subject": "Mathematics",
+    "reviewer": "Noah Anderson",
+    "stars": 5,
+    "description": "Dr. Thompson is one of the best math professors I’ve had. His clear explanations and interactive teaching style made learning calculus enjoyable."
+  },
+  {
+    "professor": "Dr. Alison Green",
+    "subject": "Philosophy",
+    "reviewer": "Isabella Perez",
+    "stars": 4,
+    "description": "Dr. Green’s course on metaphysics was intriguing. She encouraged deep reflection and open debate on complex philosophical concepts."
+  }
+]

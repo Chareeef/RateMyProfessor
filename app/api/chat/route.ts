@@ -1,22 +1,6 @@
-import { Message } from "@/types";
-import { Pinecone } from "@pinecone-database/pinecone";
-import { CohereClient } from "cohere-ai";
-import Groq from "groq-sdk";
 import { NextRequest, NextResponse } from "next/server";
-
-interface CohereEmbeddingResponse {
-  embeddings: number[][];
-}
-
-// Initialize Cohere
-const cohere = new CohereClient({ token: process.env.COHERE_API_KEY });
-
-// Initialize Pinecone index
-const pc = new Pinecone({ apiKey: process.env.PINECONE_API_KEY as string });
-const index = pc.index("professors").namespace("ns1");
-
-// Initializing Groq
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+import { Message, CohereEmbeddingResponse } from "@/types";
+import { cohere, index, groq } from "../sdks";
 
 // Define system prompt
 const systemPrompt = `You are an AI assistant specialized in recommending professors based on student reviews. You have access to detailed reviews of professors across various subjects. Your task is to provide personalized recommendations based on the specific preferences and requirements of users, such as teaching style, subject area, and star ratings.
@@ -60,7 +44,7 @@ export async function POST(req: NextRequest) {
     let contextString = "<MATCHES>\n";
     results.matches.forEach((match) => {
       contextString += `
-      Professor: ${match.id}
+      Professor: ${match.metadata?.professor}
       Reviewer: ${match.metadata?.reviewer}
       Review: ${match.metadata?.description}
       Subject: ${match.metadata?.subject}
@@ -71,6 +55,7 @@ export async function POST(req: NextRequest) {
 
     // Build complete user's prompt
     const userPrompt = `${contextString}\n\n<QUERY>${userMessage}</QUERY>`;
+    console.log(userPrompt);
 
     // Get the chat completion stream from Groq
     const previousMessages = data.slice(0, data.length - 1);
