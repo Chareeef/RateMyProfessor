@@ -83,7 +83,7 @@ export default function CreateReviewForm() {
       )}
       <form
         onSubmit={handleSubmit}
-        className=" w-1/3 flex flex-col items-center space-y-4"
+        className="w-[80%] md:w-1/2 flex flex-col items-center space-y-4"
       >
         <div className="w-full">
           <label className="font-medium text-gray-700" htmlFor="professor">
