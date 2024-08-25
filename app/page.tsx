@@ -15,10 +15,9 @@ export default function LandingPage() {
       <div className="w-full p-10 bg-white rounded-lg shadow-lg space-y-16">
         {/* Header Section */}
         <section className="text-center space-y-4">
-          <h1 className="text-5xl font-bold text-gray-800">
-            Welcome to "Rate My Professor"
-          </h1>
-          <p className="text-xl text-gray-600">
+          <h2 className="text-4xl">Welcome to :</h2>
+          <h1 className="text-5xl">Rate My Professor</h1>
+          <p className="text-xl text-gray-800">
             Find the best professor for your needs, powered by AI.
           </p>
         </section>
@@ -32,8 +31,8 @@ export default function LandingPage() {
           >
             <h3 className="m-0">AI Recommendations</h3>
             <p>
-              Tell our AI agent all you're looking for and get recommendations
-              instantly.
+              Share what you are looking for with our AI agent and receive
+              instant recommendations.
             </p>
             <Link href="/chat">
               <button className="px-6 py-3 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-200">
