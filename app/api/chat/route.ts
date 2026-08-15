@@ -66,7 +66,7 @@ export async function POST(req: NextRequest) {
         ...previousMessages,
         { role: "user", content: userPrompt },
       ],
-      model: "llama-3.3-70b-versatile",
+      model: "openai/gpt-oss-120b",
       temperature: 0.5,
       max_tokens: 1024,
       top_p: 1,
@@ -86,7 +86,7 @@ export async function POST(req: NextRequest) {
         } catch (error) {
           controller.error(error); // Handle any errors that occur during streaming
         } finally {
-          controller.close(); // Close the stream when done
+          controller.close();
         }
       },
     });
